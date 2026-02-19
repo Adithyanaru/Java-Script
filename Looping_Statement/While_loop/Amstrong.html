@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+
+
+    <script>
+        x=parseInt(prompt("Enter the number:"))
+        let sum=0;
+        let temp=x;
+//toString()'length' to get length of string
+        while(temp>0){
+            digits= temp % 10;
+            sum += digits ** 3;
+            temp = Math.floor(temp/10)
+        }
+        if (sum == x){
+            document.getElementById("resutl").innerHTML="The number is amstrong";
+        }
+        else{
+            document.getElementById("resutl").innerHTML="The number is not  amstrong";
+        }
+    </script>
+</body>
+</html>
