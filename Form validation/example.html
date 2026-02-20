@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <div>
+        <form method="post" onsubmit="return form_validation()">
+            <input type="text" placeholder="Name" id="name"><br>
+            <input type="email" placeholder="Email" id="email"><br>
+            <input type="text" placeholder="Mobile" id="mobile"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <style>
+        input {
+            width: 300px;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100px;
+            height: 35px;
+        }
+    </style>
+
+    <script>
+        function form_validation() {
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+
+            if (name === "") {
+                alert("Name should not be blank");
+                return false;
+            }
+            else if (email === "") {
+                alert("Email should not be blank");
+                return false;
+            }
+            else if (mobile === "") {
+                alert("Mobile should not be blank");
+                return false;
+
+            }
+            else if(mobile.length !=10){
+                alert("Please enter valid number")
+                return false
+            }
+            else {
+                alert("Form submitted successfully");
+                return true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
