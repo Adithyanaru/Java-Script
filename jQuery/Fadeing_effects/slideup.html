@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div1">
+        <h3>Click here</h3>
+    </div>
+    <div class="div2">
+        <h3>Welcome</h3>
+    </div>
+    <style>
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            text-align: center;
+            line-height: 200px;
+            cursor: pointer;
+        }
+
+        .div2 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            text-align: center;
+            line-height: 200px;
+            display: none;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".div1").click(function () {
+                $(".div2").slideDown(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
